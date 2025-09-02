@@ -56,38 +56,42 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-green-600 font-semibold text-sm uppercase tracking-wide"
-          >
-            Depoimentos
-          </motion.span>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 font-playfair"
-          >
-            O Que Dizem Nossos Pacientes
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Histórias reais de transformação e resultados alcançados através da nutrição personalizada
-            da Dra. Lorrany Fontinele.
-          </motion.p>
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-green-600 font-semibold text-sm uppercase tracking-wide">
+                Depoimentos
+              </span>
+            </motion.span>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 font-playfair">
+                O Que Dizem Nossos Pacientes
+              </span>
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Histórias reais de transformação e resultados alcançados através da nutrição personalizada
+                da Dra. Lorrany Fontinele.
+              </span>
+            </motion.p>
+          </div>
         </motion.div>
 
         <motion.div
@@ -95,39 +99,44 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                  {/* Rating */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+
+                  {/* Message */}
+                  <blockquote className="text-gray-700 mb-6 italic">
+                    "{testimonial.message}"
+                  </blockquote>
+
+                  {/* Author */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                      <div className="text-sm text-gray-600">{testimonial.role}</div>
+                    </div>
+                    <div className="text-2xl font-bold text-green-600">{testimonial.result}</div>
+                  </div>
                 </div>
-                <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
-                  {testimonial.result}
-                </div>
-              </div>
-              
-              <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.message}"</p>
-              
-              <div>
-                <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                <div className="text-sm text-gray-600">{testimonial.role}</div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

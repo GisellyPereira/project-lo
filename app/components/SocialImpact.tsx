@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Mutirão Nutrir Bairro',
-    description: 'Ações mensais em comunidades carentes com orientação nutricional e distribuição de alimentos saudáveis.',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=250&fit=crop&crop=center',
-    impact: '500+ famílias atendidas'
+    title: 'Educação Nutricional em Escolas',
+    description: 'Programa de conscientização sobre alimentação saudável para crianças e adolescentes.',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da1a6322?w=400&h=250&fit=crop&crop=center',
+    impact: '500+ alunos atendidos'
   },
   {
     title: 'Oficina Merenda Saudável',
@@ -32,38 +32,42 @@ export default function SocialImpact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-green-600 font-semibold text-sm uppercase tracking-wide"
-          >
-            Compromisso Social
-          </motion.span>
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-green-600 font-semibold text-sm uppercase tracking-wide">
+                Compromisso Social
+              </span>
+            </motion.span>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 font-playfair"
-          >
-            Ações Sociais
-          </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 font-playfair">
+                Ações Sociais
+              </span>
+            </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Projetos fixos que ampliam acesso à educação alimentar e promovem
-            saúde e bem-estar em comunidades carentes.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Projetos fixos que ampliam acesso à educação alimentar e promovem
+                saúde e bem-estar em comunidades carentes.
+              </span>
+            </motion.p>
+          </div>
         </motion.div>
 
         <motion.div
@@ -71,38 +75,40 @@ export default function SocialImpact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                    {project.impact}
-                  </span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        {project.impact}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{project.description}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{project.description}</p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

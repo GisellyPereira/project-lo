@@ -1,32 +1,32 @@
 'use client'
 
-import { Salad, Dumbbell, Apple, UtensilsCrossed, Heart, Target, Users, BookOpen } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Apple, UtensilsCrossed, Users, BookOpen, Target, Heart, Zap, Leaf } from 'lucide-react'
 
 const items = [
   {
     icon: Target,
     title: 'Nutrição Personalizada',
-    desc: 'Planos alimentares 100% personalizados baseados no seu estilo de vida, objetivos e preferências alimentares.',
+    desc: 'Planos alimentares individualizados baseados em seus objetivos, estilo de vida e preferências.',
     color: 'from-green-500 to-emerald-600'
   },
   {
-    icon: Salad,
+    icon: Heart,
     title: 'Emagrecimento Saudável',
-    desc: 'Perda de peso de forma sustentável, sem dietas restritivas e com foco na saúde e bem-estar.',
-    color: 'from-emerald-500 to-teal-600'
-  },
-  {
-    icon: Dumbbell,
-    title: 'Performance Esportiva',
-    desc: 'Nutrição especializada para atletas e praticantes de atividade física que buscam melhorar performance.',
+    desc: 'Perda de peso sustentável através de mudanças comportamentais e alimentação equilibrada.',
     color: 'from-blue-500 to-cyan-600'
   },
   {
-    icon: Heart,
+    icon: Zap,
+    title: 'Performance Esportiva',
+    desc: 'Nutrição específica para atletas e praticantes de atividade física, otimizando resultados.',
+    color: 'from-red-500 to-pink-600'
+  },
+  {
+    icon: Leaf,
     title: 'Saúde e Bem-estar',
-    desc: 'Melhoria da qualidade de vida através de hábitos alimentares saudáveis e equilibrados.',
-    color: 'from-pink-500 to-rose-600'
+    desc: 'Foco na saúde geral, prevenção de doenças e melhoria da qualidade de vida.',
+    color: 'from-teal-500 to-green-600'
   },
   {
     icon: Apple,
@@ -63,38 +63,42 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-green-600 font-semibold text-sm uppercase tracking-wide"
-          >
-            Nossos Serviços
-          </motion.span>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 font-playfair"
-          >
-            Soluções Completas para Sua Saúde
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Oferecemos uma abordagem personalizada e científica para transformar sua relação com a alimentação
-            e alcançar seus objetivos de saúde e bem-estar.
-          </motion.p>
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-green-600 font-semibold text-sm uppercase tracking-wide">
+                Nossos Serviços
+              </span>
+            </motion.span>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 font-playfair">
+                Soluções Completas para Sua Saúde
+              </span>
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Oferecemos uma abordagem personalizada e científica para transformar sua relação com a alimentação
+                e alcançar seus objetivos de saúde e bem-estar.
+              </span>
+            </motion.p>
+          </div>
         </motion.div>
 
         <motion.div
@@ -102,25 +106,27 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {items.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6`}>
-                <item.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {items.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6`}>
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
