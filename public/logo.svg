@@ -1,5 +1,28 @@
-<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <rect width="256" height="256" rx="48" fill="#1A2565"/>
-  <path d="M62 162c20 22 44 34 66 34 46 0 66-34 66-66 0-31-18-61-53-61-30 0-46 23-46 41 0 15 10 27 25 27 13 0 22-10 22-22 0-10-6-19-18-21 7-9 19-14 33-14 33 0 50 24 50 52 0 29-21 54-54 54-24 0-47-12-64-32l-7 8z" fill="#fff"/>
-  <circle cx="88" cy="92" r="10" fill="#A04CCB"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 310 70"
+  role="img"
+  aria-label="Nutriviva"
+>
+  <g fill="#8b2448">
+    <path
+      d="M32 57C14 43 7 27 11 10c20 0 31 14 21 47Zm3 0C53 43 60 27 56 10c-20 0-31 14-21 47Z"
+    />
+    <text
+      x="73"
+      y="49"
+      font-family="Fraunces,Georgia,serif"
+      font-size="48"
+      font-weight="600"
+      letter-spacing="-2"
+    >
+      nutriviva
+    </text>
+  </g>
+  <path
+    d="M33.5 57V14"
+    stroke="#fff8ee"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
 </svg>

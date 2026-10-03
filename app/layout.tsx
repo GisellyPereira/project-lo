@@ -1,34 +1,38 @@
-import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import "@fontsource-variable/fraunces";
+import "@fontsource-variable/dm-sans";
+import "lenis/dist/lenis.css";
+import "./globals.css";
+import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: 'Dra. Lorrany Fontinele - Nutricionista Especialista',
-  description: 'Nutrição personalizada, emagrecimento saudável, performance esportiva e bem-estar. Agende sua consulta com a Dra. Lorrany Fontinele (CRN-15 98765).',
-  robots: 'index, follow',
+  title: {
+    default: "Nutriviva — Mais sabor na vida",
+    template: "%s | Nutriviva",
+  },
+  description:
+    "Uma nova conversa sobre alimentação: mais sabor, escolhas possíveis e espaço para a vida real. Conheça a experiência Nutriviva.",
   openGraph: {
-    title: 'Dra. Lorrany Fontinele - Nutricionista Especialista',
-    description: 'Transforme sua vida através da nutrição personalizada. Emagrecimento saudável, performance esportiva e bem-estar.',
-    url: 'https://lorranyfontinele.com.br',
-    siteName: 'Dra. Lorrany Fontinele',
-    locale: 'pt_BR',
-    type: 'website'
-  }
-}
-
-const inter = Inter({ subsets: ['latin'] })
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
-
+    title: "Nutriviva — Mais sabor na vida",
+    description: "Comer bem também é viver do seu jeito.",
+    locale: "pt_BR",
+    type: "website",
+  },
+};
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} ${playfair.variable}`}>
+      <body>
+        <SmoothScroll />
+        <a className="skip-link" href="#conteudo">
+          Ir para o conteúdo
+        </a>
         {children}
       </body>
     </html>
-  )
+  );
 }

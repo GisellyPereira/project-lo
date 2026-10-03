@@ -1,23 +1,26 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Testimonials from './components/Testimonials'
-import CTASection from './components/CTASection'
-import Footer from './components/Footer'
-
-export default function Page() {
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ServicesExplorer from "./components/ServicesExplorer";
+import {
+  Hero,
+  Manifesto,
+  OurApproach,
+  JournalPreview,
+  Closing,
+} from "./components/Nutriviva";
+export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="conteudo">
         <Hero />
-        <About />
-        <Services />
-        <Testimonials />
-        <CTASection />
+        <Manifesto />
+        <ServicesExplorer />
+        <OurApproach />
+        <JournalPreview />
+        <Closing />
       </main>
       <Footer />
     </>
-  )
+  );
 }

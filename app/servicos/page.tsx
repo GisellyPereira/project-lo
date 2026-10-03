@@ -1,32 +1,30 @@
-import Navbar from '../components/Navbar'
-import Services from '../components/Services'
-import Pricing from '../components/Pricing'
-import FAQ from '../components/FAQ'
-import Footer from '../components/Footer'
-
-export default function ServicosPage() {
+import type { Metadata } from "next";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import ServicesExplorer from "../components/ServicesExplorer";
+import { OurApproach, Questions, Closing } from "../components/Nutriviva";
+export const metadata: Metadata = { title: "Acompanhamento" };
+export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <main>
-        <div className="pt-20 pb-16 bg-gradient-to-br from-green-50 to-emerald-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold text-gray-900 mb-4 font-playfair">
-                Nossos Serviços
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Oferecemos soluções personalizadas para transformar sua relação com a alimentação 
-                e alcançar seus objetivos de saúde e bem-estar.
-              </p>
-            </div>
-          </div>
+      <main id="conteudo">
+        <div className="page-intro shell">
+          <h1>
+            O cuidado encontra
+            <br />o seu <em>momento.</em>
+          </h1>
+          <p>
+            Um caminho construído com você, que respeita sua rotina, suas
+            escolhas e o que faz sentido para a sua vida.
+          </p>
         </div>
-        <Services />
-        <Pricing />
-        <FAQ />
+        <ServicesExplorer />
+        <OurApproach />
+        <Questions />
+        <Closing />
       </main>
       <Footer />
     </>
-  )
+  );
 }
