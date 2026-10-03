@@ -6,7 +6,7 @@ Comer bem é para a vida real.
 
 Uma experiência digital de nutrição, comida e cotidiano.
 
-[Explorar o código](https://github.com/GisellyPereira/project-lo) · [Direção visual](docs/visual-direction.md)
+[Ver o projeto online](https://nutriviva-nutri.netlify.app/) · [Explorar o código](https://github.com/GisellyPereira/project-lo) · [Direção visual](docs/visual-direction.md)
 
 </div>
 
